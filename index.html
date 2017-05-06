@@ -152,9 +152,70 @@
 				<section>
 					Idea(tion), music making
 				</section>
-
 				<section>
-					Software v2015
+					<h2>The software</h2>
+				</section>
+        <section>
+					<h1>
+[<span style="color: papayawhip">144</span>, <span style="color: aquamarine;">66</span>, <span style="color: coral">127</span>]
+					</h1>
+        </section>
+				<section>
+					<pre>
+						<code>
+  module.exports = {
+    // ROW 1
+    // Intro
+    0: new VideoNode('videos/720p/roberts.m4v'),
+    1: new VideoNode('videos/720p/williams3.m4v'),
+    2: new VideoNode('videos/720p/reactconf1.m4v'),
+    // Chorus
+    3: new VideoNode('videos/720p/rockbot3.m4v'),
+    4: new VideoNode('videos/720p/schiffer.m4v'),
+    5: new VideoNode('videos/720p/emberconf4.m4v'),
+    6: new VideoNode('videos/720p/emberconf5.m4v')
+  };
+						</code>
+					</pre>
+				</section>
+        <section>
+          <h2>Preloading</h2>
+        </section>
+				<section><pre><code>
+  const v = document.createElement('video');
+  const sn = context.createMediaElementSource(v);
+
+</code></pre>
+</section>
+				<section>
+<pre><code>
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', this.location, true);
+  xhr.responseType = 'arraybuffer';
+  xhr.onload = (event) => {
+    const blob = new Blob(
+      [event.target.response],
+      {type: 'video/mp4'}
+    );
+    videElement.src = URL.createObjectURL(blob);
+  };
+
+</code></pre>
+				</section>
+				<section>
+					<ul>
+						<li>Do the same for audio elements</li>
+						<li class="fragment fade-up">Have someone who is good at pushing buttons in sync with a beat</li>
+						<li class="fragment fade-up">Taddaaa, you have your JSConf opening performance</li>
+					</ul>
+				</section>
+				<section>
+					<h3>There's more, there's always more</h3>
+					<ul>
+						<li class="fragment fade-up">Videos were pre-rendered</li>
+						<li class="fragment fade-up">Beat not live performed</li>
+						<li class="fragment fade-up">If we only had more time, we would have done it all live</li>
+					</ul>
 				</section>
 				<section>
 					<ul>
