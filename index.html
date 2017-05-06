@@ -186,15 +186,20 @@
 						</code>
 					</pre>
 				</section>
-        <section>
-          <h2>Preloading</h2>
-        </section>
 				<section><pre><code>
   const v = document.createElement('video');
   const sn = context.createMediaElementSource(v);
 
 </code></pre>
 </section>
+	<section>
+		<h3>How to play a video without delay?</h3>
+		<ul>
+			<li class="fragment fade-up">videoElement.play() ?</li>
+			<li class="fragment fade-up">preload -> videoElement.play() ?</li>
+			<li class="fragment fade-up">obscure hack -> videoElement.play() ?</li>
+		</ul>
+	</section>
 				<section>
 <pre><code>
   const xhr = new XMLHttpRequest();
@@ -203,7 +208,7 @@
   xhr.onload = (event) => {
     const blob = new Blob(
       [event.target.response],
-      {type: 'video/mp4'}
+      { type: 'video/mp4' }
     );
     videElement.src = URL.createObjectURL(blob);
   };
@@ -225,46 +230,6 @@
 						<li class="fragment fade-up">If we only had more time, we would have done it all live</li>
 					</ul>
 				</section>
-
-				<section>
-					<ul>
-						<li>JSconf 2014: Solo MIDI performance but thinking about a band</li>
-						<li>JSConf.eu asking if I want to perform in 2015</li>
-						<li>One day later: Kahlil tweets about his musical past (Ill Inspecta - Like Puppa San video)</li>
-						<li>Talking about a collab</li>
-						<li>Kahlil also has a producer as a brother => match made in heaven!</li>
-						<li>Especially since I had no clue how to produce music myself :D</li>
-					</ul>
-				</section>
-				<section>
-					<h1>Verse I</h1>
-				</section>
-				<section>
-					<ul>
-						<li>Idea: Create a Mark Ronson-ish performance with JS topic https://www.youtube.com/watch?v=H3TF-hI7zKc</li>
-						<li>Use Launchpad for samples</li>
-						<li>Do everything in JavaScript (Web Audio / Web MIDI, &lt;canvas /&gt;, &lt;video /&gt;)</li>
-						<li>Download ALL the JS YouTube videos</li>
-						<li>Use existing beat as base due to time limitation</li>
-						<li>Add JS rap to the mix -> Boom!</li>
-					</ul>
-				</section>
-				<section>
-					<ul>
-						<li>Weekend in Stuttgart (got pictures)</li>
-						<li>Cutting, programming, sampling, ideation, a lot of Exploding Kittens</li>
-						<li>Rough idea of the song after two days and iterating over it on the weeks after (have videos)</li>
-					</ul>
-				</section>
-				<section>
-					<h1>Diagram of software setup of v1</h1>
-				</section>
-				<section>
-					<h1>Crescendo</h1>
-				</section>
-				<section>
-					<h1>Chorus I</h1>
-				</section>
 				<section>
 					<h1>Overwhelming Response</h1>
 				</section>
@@ -275,7 +240,19 @@
 					<h1>Caesura (JSConf.eu break)</h1>
 				</section>
 				<section>
-					<h1>Prelude 2</h1>
+					<h1>Step it up a notch!</h1>
+				</section>
+				<section>
+					<h1>Build a real piece of software</h1>
+				</section>
+				<section>
+					<img src="media/projectprogress.jpg" class="stretch" />
+				</section>
+				<section>
+					<h3>2015: Push a button -> do the thing</h3>
+				</section>
+				<section>
+					<h3>2017: Push a button <span class="js-highlight">10x edition</span></h3>
 				</section>
 				<section>
 					<ul>
@@ -288,12 +265,14 @@
 					</ul>
 				</section>
 				<section>
-					<img src="media/projectprogress.jpg" class="stretch" />
-				</section>
-				<section>
+					<h2>The stack</h2>
 					<img src="media/electron.svg" style="width: 30%;" />
 					<img src="media/react.svg" style="width: 30%;" />
 					<img src="media/redux.png" style="width: 30%;" />
+				</section>
+				<section>
+					<h3>The app</h3>
+					<img src="media/theapp.jpg" />
 				</section>
 				<section>
 					<ul>
